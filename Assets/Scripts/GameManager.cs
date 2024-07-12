@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] private int MAX_DAYS;
     [SerializeField] public float TRAVEL_TIME;
+    [SerializeField] public float INVENTORY_SIZE;
 
     private int _daysUsed;
     [SerializeField] private List<VillageManager> _villages;
