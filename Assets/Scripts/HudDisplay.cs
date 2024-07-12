@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class HudDisplay : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI daysLeft;
-    [SerializeField] TextMeshProUGUI currentFA;
+    [SerializeField] TMPro.TextMeshProUGUI daysLeft;
+    [SerializeField] TMPro.TextMeshProUGUI currentFA;
 
     public void Display() {
         daysLeft.text = "Jours restants : " + GameManager.Instance.GetDaysLeft().ToString();
-        currentFA.text = "Forces armées : " + GameManager.Instance.GetCurrentFA().ToString();
+        currentFA.text = "Forces armï¿½es : " + GameManager.Instance.GetCurrentFA().ToString();
     }
 }
