@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public enum ItemType {
+    Nourriture,
+    Metal,
+    Magie
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public enum Rarity {
+    Common,
+    Uncommon,
+    Rare
+}
+
+[CreateAssetMenu(fileName = "Item", menuName = "New Item")]
+public class Item : ScriptableObject
+{
+    public ItemType Type;
+    public int value;
+    public Rarity Rarity;
 }

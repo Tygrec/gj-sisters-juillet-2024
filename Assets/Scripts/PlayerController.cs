@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,17 +12,19 @@ public class PlayerController : MonoBehaviour
         instance = this;
     }
 
-    public void MoveTo(Vector3 position) {
+    public void MoveTo(LocationManager location) {
         _startPosition = transform.position;
-        _endPosition = position;
+        _endPosition = location.transform.position;
 
         float distance = Vector3.Distance(_startPosition, _endPosition);
         GameManager.Instance.AddDays((int)distance);
 
-        StartCoroutine(I_MoveTo());
+        StartCoroutine(I_MoveTo(location));
+
+        
     }
 
-    IEnumerator I_MoveTo() {
+    IEnumerator I_MoveTo(LocationManager location) {
         float elapsedTime = 0.0f;
         float travelTime = GameManager.Instance.TRAVEL_TIME;
 
@@ -34,7 +37,10 @@ public class PlayerController : MonoBehaviour
 
             yield return null;
         }
-
         transform.position = _endPosition;
+
+        if (location.gameObject.GetComponent<AventureManager>() != null) {
+            UiManager.instance.DisplayAdventure(location.gameObject.GetComponent<AventureManager>());
+        }
     }
 }
