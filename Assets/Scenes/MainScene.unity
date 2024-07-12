@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveTextBox: {fileID: 1227201668}
-  _moveTextBoxText: {fileID: 1392827776}
+  _moveTextBoxText: {fileID: 0}
   _hudDisplay: {fileID: 710395187}
 --- !u!1 &1227201668
 GameObject:

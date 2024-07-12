@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class UiManager : MonoBehaviour
@@ -8,7 +7,7 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
 
     [SerializeField] GameObject _moveTextBox;
-    [SerializeField] TextMeshProUGUI _moveTextBoxText;
+    [SerializeField] TMPro.TextMeshProUGUI _moveTextBoxText;
     [SerializeField] HudDisplay _hudDisplay;
 
     private LocationManager _currentLocation;
@@ -20,7 +19,7 @@ public class UiManager : MonoBehaviour
     public void DisplayMoveTextBox(LocationManager location) {
         _currentLocation = location;
         _moveTextBox.SetActive(true);
-        _moveTextBoxText.text = "Voulez-vous vous rendre à " + location.name + " ?";
+        _moveTextBoxText.text = "Voulez-vous vous rendre Ã  " + location.name + " ?";
     }
 
     public void MoveToLocation() {
