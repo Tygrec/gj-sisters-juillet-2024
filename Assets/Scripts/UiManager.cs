@@ -19,7 +19,7 @@ public class UiManager : MonoBehaviour
     public void DisplayMoveTextBox(LocationManager location) {
         _currentLocation = location;
         _moveTextBox.SetActive(true);
-        _moveTextBoxText.text = "Voulez-vous vous rendre � " + location.name + " ?";
+        _moveTextBoxText.text = "Voulez-vous vous rendre à " + location.name + " ?";
     }
 
     public void MoveToLocation() {

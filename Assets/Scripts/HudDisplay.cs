@@ -9,6 +9,6 @@ public class HudDisplay : MonoBehaviour
 
     public void Display() {
         daysLeft.text = "Jours restants : " + GameManager.Instance.GetDaysLeft().ToString();
-        currentFA.text = "Forces arm�es : " + GameManager.Instance.GetCurrentFA().ToString();
+        currentFA.text = "Forces armées : " + GameManager.Instance.GetCurrentFA().ToString();
     }
 }
