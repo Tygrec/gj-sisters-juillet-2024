@@ -18,9 +18,16 @@ public class AdventureDisplay : MonoBehaviour
     }
 
     public void DisplayPostExplo() {
+        _preExplo.Clear();
         _preExplo.gameObject.SetActive(false);
         _postExplo.gameObject.SetActive(true);
 
         _postExplo.Display(_currentAventure);
+    }
+    public void QuitDisplay() {
+        GameManager.Instance.ChangeState(GameState.WORLDMAP);
+
+        _postExplo.Clear();
+        gameObject.SetActive(false);
     }
 }

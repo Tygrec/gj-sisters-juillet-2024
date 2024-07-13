@@ -18,4 +18,9 @@ public class VillageDisplay : MonoBehaviour
         forgeNeed.text = $"Forge : {village.NeedForSpec[ItemType.Metal]} métal ({village.CurrentInventory[ItemType.Metal]} / {village.NeedForSpec[ItemType.Metal]})";
         magieNeed.text = $"Magie : {village.NeedForSpec[ItemType.Magie]} magie ({village.CurrentInventory[ItemType.Magie]} / {village.NeedForSpec[ItemType.Magie]})";
     }
+
+    public void QuitDisplay() {
+        GameManager.Instance.ChangeState(GameState.WORLDMAP);
+        gameObject.SetActive(false);
+    }
 }

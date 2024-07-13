@@ -12,4 +12,9 @@ public class PostExploDisplay : MonoBehaviour
             slot.DisplayItem(item, 1);
         }
     }
+    public void Clear() {
+        foreach (Transform transform in lootableTransform) {
+            Destroy(transform.gameObject);
+        }
+    }
 }
