@@ -39,8 +39,11 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = _endPosition;
 
-        if (location.gameObject.GetComponent<AventureManager>() != null) {
-            UiManager.instance.DisplayAdventure(location.gameObject.GetComponent<AventureManager>());
+        if (location.gameObject.GetComponent<AdventureManager>() != null) {
+            UiManager.instance.DisplayAdventure(location.gameObject.GetComponent<AdventureManager>());
+        }
+        else if (location.gameObject.GetComponent<VillageManager>() != null) {
+            UiManager.instance.DisplayVillage(location.gameObject.GetComponent<VillageManager>());
         }
     }
 }

@@ -7,9 +7,9 @@ public class AdventureDisplay : MonoBehaviour
     [SerializeField] PreExploDisplay _preExplo;
     [SerializeField] PostExploDisplay _postExplo;
 
-    private AventureManager _currentAventure;
+    private AdventureManager _currentAventure;
 
-    public void DisplayPreExplo(AventureManager aventure) {
+    public void DisplayPreExplo(AdventureManager aventure) {
         _currentAventure = aventure;
         _preExplo.gameObject.SetActive(true);
         _postExplo.gameObject.SetActive(false);

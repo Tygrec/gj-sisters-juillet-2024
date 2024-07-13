@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AventureManager : MonoBehaviour
+public class AdventureManager : MonoBehaviour
 {
     [SerializeField] public List<Item> lootables;
 }
