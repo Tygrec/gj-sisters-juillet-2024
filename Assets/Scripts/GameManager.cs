@@ -20,8 +20,14 @@ public class GameManager : MonoBehaviour {
     [SerializeField] public int MIN_ITEM_FOR_SPEC;
 
     private int _daysUsed;
+    [SerializeField] private Transform _adventuresTransform;
     [SerializeField] private Transform _villagesTransform;
     [SerializeField] private List<VillageManager> _villages = new List<VillageManager>();
+
+    public Dictionary<Item, int> PlayerInventory = new Dictionary<Item, int>();
+
+    public int CurrentLocationId = -1;
+    public VillageManager CurrentVillage = null;
 
     public int GetDaysLeft() {
         return MAX_DAYS - _daysUsed;
@@ -44,12 +50,40 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        foreach(Transform village in _villagesTransform) {
+        int i = 0;
+        foreach (Transform village in _villagesTransform) {
             _villages.Add(village.GetComponent<VillageManager>());
+            village.GetComponent<LocationManager>().id = i;
+            i++;
+        }
+
+        foreach (Transform adventure in _adventuresTransform) {
+            adventure.GetComponent<LocationManager>().id = i;
+            i++;
         }
     }
 
     public void ChangeState(GameState newState) {
         GameState = newState;
+    }
+
+    public void AddItemToInventory(Item item, int quantity) {
+        if (PlayerInventory.ContainsKey(item)) {
+            PlayerInventory[item] += quantity;
+        }
+        else { 
+            PlayerInventory.Add(item, quantity);
+        }
+
+        UiManager.instance.DisplayInventory();
+    }
+
+    public void RemoveItemFromInventory(Item item, int quantity) {
+        PlayerInventory[item] -= quantity;
+
+        if( quantity <= 0)
+            PlayerInventory.Remove(item);
+
+        UiManager.instance.DisplayInventory();
     }
 }

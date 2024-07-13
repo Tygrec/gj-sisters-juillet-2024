@@ -523,8 +523,10 @@ MonoBehaviour:
   INVENTORY_SIZE: 15
   MAX_ITEM_FOR_SPEC: 10
   MIN_ITEM_FOR_SPEC: 20
+  _adventuresTransform: {fileID: 1804144733}
   _villagesTransform: {fileID: 453560743}
   _villages: []
+  CurrentAdventureId: -1
 --- !u!4 &1576598766
 Transform:
   m_ObjectHideFlags: 0

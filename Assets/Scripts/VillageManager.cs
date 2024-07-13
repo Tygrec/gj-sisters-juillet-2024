@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
+public enum Specialization {
+    Forge,
+    Elevage,
+    Magie
+}
 public class VillageManager : MonoBehaviour {
 
     public Dictionary<ItemType, int> NeedForSpec = new Dictionary<ItemType, int>();
@@ -22,4 +27,15 @@ public class VillageManager : MonoBehaviour {
         }
     }
 
+    public void AddItemToVillageInventory(Item item, int quantity) {
+        CurrentInventory[item.Type] += quantity * item.value;
+
+        if (CurrentInventory[item.Type] >= NeedForSpec[item.Type]) {
+        
+        }
+    }
+
+    private void SpecializeVillage() {
+
+    }
 }

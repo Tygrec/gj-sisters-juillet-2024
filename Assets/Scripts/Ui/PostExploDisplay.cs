@@ -9,7 +9,9 @@ public class PostExploDisplay : MonoBehaviour
     public void Display(AdventureManager aventure) {
         foreach (var item in aventure.lootables) {
             Slot slot = Instantiate(Resources.Load<Slot>("Prefabs/Slot"), lootableTransform);
-            slot.DisplayItem(item, 1);
+            slot.inventoryType = InventoryType.Adventure;
+            slot.DisplayItem(item, 3);
+            // TODO : faire le loot d'objets et la quantité aléatoire en fonction de l'aventure et la rareté
         }
     }
     public void Clear() {

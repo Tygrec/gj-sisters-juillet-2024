@@ -39,9 +39,13 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = _endPosition;
 
+        GameManager.Instance.CurrentLocationId = location.id;
+
         if (location.gameObject.GetComponent<AdventureManager>() != null) {
+
             UiManager.instance.DisplayAdventure(location.gameObject.GetComponent<AdventureManager>());
             GameManager.Instance.ChangeState(GameState.ADVENTURE);
+
         }
         else if (location.gameObject.GetComponent<VillageManager>() != null) {
             UiManager.instance.DisplayVillage(location.gameObject.GetComponent<VillageManager>());

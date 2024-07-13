@@ -10,10 +10,11 @@ public class InventoryDisplay : MonoBehaviour
     private void Start() {
         for (int i = 0; i < GameManager.Instance.INVENTORY_SIZE; i++) {
             _slots.Add(Instantiate(Resources.Load<Slot>("Prefabs/Slot"), _slotsTransform));
+            _slots[i].inventoryType = InventoryType.Player;
         }
     }
 
-    public void AddItem(Item item, int quantity) {
+ /*   public void AddItem(Item item, int quantity) {
 
         Slot slot = _slots.Find(s => s.Item == item);
 
@@ -30,5 +31,24 @@ public class InventoryDisplay : MonoBehaviour
                 }
             }
         }
+    } */
+
+    public void Display() {
+        int i = 0;
+
+        foreach (var pair in GameManager.Instance.PlayerInventory) {
+            if (i >= _slots.Count)
+                break;
+
+            _slots[i].DisplayItem(pair.Key, pair.Value);
+            i++;
+        }
+    }
+
+    public void ExitDisplay() {
+        if (GameManager.Instance.GameState != GameState.WORLDMAP)
+            return;
+
+        gameObject.SetActive(false);
     }
 }
