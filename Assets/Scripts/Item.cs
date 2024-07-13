@@ -11,7 +11,8 @@ public enum ItemType {
 public enum Rarity {
     Common,
     Uncommon,
-    Rare
+    Rare,
+    Legendary
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]
