@@ -9,6 +9,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] GameObject _moveTextBox;
     [SerializeField] TMPro.TextMeshProUGUI _moveTextBoxText;
     [SerializeField] HudDisplay _hudDisplay;
+    [SerializeField] AdventureDisplay _adventureDisplay;
+    [SerializeField] VillageDisplay _villageDisplay;
 
     private LocationManager _currentLocation;
 
@@ -23,10 +25,20 @@ public class UiManager : MonoBehaviour
     }
 
     public void MoveToLocation() {
-        PlayerController.instance.MoveTo(_currentLocation.transform.position);
+        PlayerController.instance.MoveTo(_currentLocation);
     }
 
     private void Update() {
         _hudDisplay.Display();
+    }
+
+    public void DisplayAdventure(AdventureManager adventure) {
+        _adventureDisplay.gameObject.SetActive(true);
+        _adventureDisplay.DisplayPreExplo(adventure);
+    }
+
+    public void DisplayVillage(VillageManager village) {
+        _villageDisplay.gameObject.SetActive(true);
+        _villageDisplay.Display(village);
     }
 }

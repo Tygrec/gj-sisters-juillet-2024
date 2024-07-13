@@ -12,4 +12,23 @@ public class InventoryDisplay : MonoBehaviour
             _slots.Add(Instantiate(Resources.Load<Slot>("Prefabs/Slot"), _slotsTransform));
         }
     }
+
+    public void AddItem(Item item, int quantity) {
+
+        Slot slot = _slots.Find(s => s.Item == item);
+
+        if (slot != null) {
+            slot.AddQuantity(quantity);
+        }
+        else {
+
+            foreach (Slot s in _slots) {
+
+                if (s.Item == null) {
+                    s.DisplayItem(item, quantity);
+                    break;
+                }
+            }
+        }
+    }
 }

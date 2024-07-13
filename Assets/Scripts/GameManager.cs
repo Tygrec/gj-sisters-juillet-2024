@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private int MAX_DAYS;
     [SerializeField] public float TRAVEL_TIME;
     [SerializeField] public float INVENTORY_SIZE;
+    [SerializeField] public int MAX_ITEM_FOR_SPEC;
+    [SerializeField] public int MIN_ITEM_FOR_SPEC;
 
     private int _daysUsed;
-    [SerializeField] private List<VillageManager> _villages;
+    [SerializeField] private Transform _villagesTransform;
+    [SerializeField] private List<VillageManager> _villages = new List<VillageManager>();
 
     public int GetDaysLeft() {
         return MAX_DAYS - _daysUsed;
@@ -34,6 +37,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        
+        foreach(Transform village in _villagesTransform) {
+            _villages.Add(village.GetComponent<VillageManager>());
+        }
     }
 }
