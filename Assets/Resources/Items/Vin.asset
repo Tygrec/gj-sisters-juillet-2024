@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vin
   m_EditorClassIdentifier: 
   Type: 0
-  value: 10
-  Rarity: 2
+  value: 30
+  Rarity: 3

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -285,6 +285,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1576598766}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &438197726 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+  m_PrefabInstance: {fileID: 1291743128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453560742
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
-      value: Aventure
+      value: Aventure_foret2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -505,6 +510,79 @@ MonoBehaviour:
   zoomSpeed: 10
   minZoom: 0
   maxZoom: 100
+--- !u!1001 &1291743128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1804144733}
+    m_Modifications:
+    - target: {fileID: 5547831618039207145, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_Name
+      value: Adventure_ruines
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: lootables.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: lootables.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 58124864911e50e439351229fc57c671, type: 2}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: lootables.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: e1b230307ab619b4683f34b7b22218fd, type: 2}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: lootables.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d81aaae4fc639d429341e85805ae693, type: 2}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54311085
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.35422993
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
 --- !u!1 &1576598764
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +672,7 @@ Transform:
   m_Children:
   - {fileID: 1897064145}
   - {fileID: 720303328}
+  - {fileID: 438197726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1897064145 stripped
@@ -906,7 +985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
-      value: Aventure
+      value: Aventure_foret1
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
