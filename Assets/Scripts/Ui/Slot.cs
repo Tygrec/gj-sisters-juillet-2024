@@ -17,15 +17,27 @@ public class Slot : MonoBehaviour, IPointerDownHandler
     public Item Item = null;
     int _quantity = 0;
 
+    public int GetQuantity() {
+        return _quantity;
+    }
+
     private void Awake() {
         _quantityText.text = "0";
     }
 
     public void DisplayItem(Item item, int quantity) {
+        _quantityText.transform.parent.gameObject.SetActive(true);
         Item = item;
         _quantity = quantity;
         _itemImage.sprite = Resources.Load<Sprite>($"Sprites/{item.name}");
         _quantityText.text = _quantity.ToString();
+    }
+
+    public void Clear() {
+        this.Item = null;
+        _quantity = 0;
+        _quantityText.transform.parent.gameObject.SetActive(false);
+        _itemImage.sprite = null;
     }
 
     public void OnPointerDown(PointerEventData eventData) {
@@ -33,6 +45,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
             return;
 
         if (inventoryType == InventoryType.Adventure) {
+
             if (Input.GetMouseButtonDown(0)) {
                 GameManager.Instance.AddItemToInventory(Item, 1);
                 _quantity--;
@@ -43,17 +56,26 @@ public class Slot : MonoBehaviour, IPointerDownHandler
             }
         }
 
-        if (inventoryType == InventoryType.Player) {
+        if (GameManager.Instance.GameState == GameState.VILLAGE &&  inventoryType == InventoryType.Player) {
+
             if (Input.GetMouseButtonDown(0)) {
+                GameManager.Instance.CurrentVillage.AddItemToVillageInventory(Item, 1);
                 GameManager.Instance.RemoveItemFromInventory(Item, 1);
-                _quantity--;
             }
             else if (Input.GetMouseButtonDown(1)) {
+                GameManager.Instance.CurrentVillage.AddItemToVillageInventory(Item, _quantity);
                 GameManager.Instance.RemoveItemFromInventory(Item, _quantity);
-                _quantity = 0;
             }
+            print(Item);
+            if (!GameManager.Instance.PlayerInventory.ContainsKey(Item))
+                _quantity = 0;
+            else
+                _quantity = GameManager.Instance.PlayerInventory[Item];
+
+            UiManager.instance.DisplayVillage(GameManager.Instance.CurrentVillage);
         }
 
+        UiManager.instance.DisplayInventory();
         _quantityText.text = _quantity.ToString();
     }
 }

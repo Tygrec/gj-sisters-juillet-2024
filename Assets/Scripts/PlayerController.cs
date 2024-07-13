@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (location.gameObject.GetComponent<VillageManager>() != null) {
             UiManager.instance.DisplayVillage(location.gameObject.GetComponent<VillageManager>());
+            GameManager.Instance.CurrentVillage = location.gameObject.GetComponent<VillageManager>();
             GameManager.Instance.ChangeState(GameState.VILLAGE);
         }
     }

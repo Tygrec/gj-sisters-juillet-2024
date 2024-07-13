@@ -14,34 +14,19 @@ public class InventoryDisplay : MonoBehaviour
         }
     }
 
- /*   public void AddItem(Item item, int quantity) {
-
-        Slot slot = _slots.Find(s => s.Item == item);
-
-        if (slot != null) {
-            slot.AddQuantity(quantity);
-        }
-        else {
-
-            foreach (Slot s in _slots) {
-
-                if (s.Item == null) {
-                    s.DisplayItem(item, quantity);
-                    break;
-                }
-            }
-        }
-    } */
-
     public void Display() {
         int i = 0;
-
         foreach (var pair in GameManager.Instance.PlayerInventory) {
+
             if (i >= _slots.Count)
                 break;
 
             _slots[i].DisplayItem(pair.Key, pair.Value);
             i++;
+        }
+
+        for (int j = i ; j < _slots.Count; j++) {
+            _slots[j].Clear();
         }
     }
 

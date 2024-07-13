@@ -31,11 +31,11 @@ public class VillageManager : MonoBehaviour {
         CurrentInventory[item.Type] += quantity * item.value;
 
         if (CurrentInventory[item.Type] >= NeedForSpec[item.Type]) {
-        
+            SpecializeVillage(item.Type);
         }
     }
 
-    private void SpecializeVillage() {
-
+    private void SpecializeVillage(ItemType type) {
+        print("Ce village est spécialisé en " + type);
     }
 }

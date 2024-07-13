@@ -81,9 +81,10 @@ public class GameManager : MonoBehaviour {
     public void RemoveItemFromInventory(Item item, int quantity) {
         PlayerInventory[item] -= quantity;
 
-        if( quantity <= 0)
+        if(PlayerInventory[item] <= 0) {
             PlayerInventory.Remove(item);
+        }
 
-        UiManager.instance.DisplayInventory();
+     //   UiManager.instance.DisplayInventory();
     }
 }

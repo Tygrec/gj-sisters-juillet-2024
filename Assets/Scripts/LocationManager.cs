@@ -8,7 +8,12 @@ public class LocationManager : MonoBehaviour {
     private void OnMouseDown() {
         if (GameManager.Instance.GameState != GameState.WORLDMAP)
             return;
-        
+
+        if (GameManager.Instance.CurrentLocationId == id && GetComponent<VillageManager>() != null) {
+            UiManager.instance.DisplayVillage(GetComponent<VillageManager>());
+            return;
+        }
+
         if (GameManager.Instance.CurrentLocationId == id)
             return;
 
