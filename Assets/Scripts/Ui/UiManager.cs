@@ -14,6 +14,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] VillageDisplay _villageDisplay;
     [SerializeField] InventoryDisplay _inventoryDisplay;
 
+    [SerializeField] TooltipDisplay _tooltipDisplay;
+
     private LocationManager _currentLocation;
 
     private void Awake() {
@@ -55,4 +57,13 @@ public class UiManager : MonoBehaviour
         _inventoryDisplay.gameObject.SetActive(true);
         _inventoryDisplay.Display();
     }
+
+    public void DisplayTooltip(Item item) {
+        _tooltipDisplay.gameObject.SetActive(true);
+        _tooltipDisplay.Display(item);
+    }
+    public void HideTooltip() {
+        _tooltipDisplay?.gameObject.SetActive(false);
+    }
+
 }

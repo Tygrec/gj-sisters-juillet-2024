@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] public float INVENTORY_SIZE;
     [SerializeField] public int MAX_ITEM_FOR_SPEC;
     [SerializeField] public int MIN_ITEM_FOR_SPEC;
+    [SerializeField] public int FORGE_VALUE;
+    [SerializeField] public int ELEVAGE_VALUE;
+    [SerializeField] public int MAGIE_VALUE;
+    [SerializeField] public int PRODUCTION_EVERY_X_DAYS;
 
     private int _daysUsed;
     [SerializeField] private Transform _adventuresTransform;
@@ -39,7 +43,7 @@ public class GameManager : MonoBehaviour {
         int fa = 0;
         
         foreach (var village in _villages) {
-            fa += village.GetFA();
+            fa += village.GetWarEffort();
         }
 
         return fa;

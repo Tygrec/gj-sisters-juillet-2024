@@ -5,4 +5,5 @@ using UnityEngine;
 public class AdventureManager : MonoBehaviour
 {
     [SerializeField] public List<Item> lootables;
+    [SerializeField] public int nbDays;
 }

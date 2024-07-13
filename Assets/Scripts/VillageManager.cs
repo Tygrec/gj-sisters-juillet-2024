@@ -5,6 +5,7 @@ using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public enum Specialization {
+    None,
     Forge,
     Elevage,
     Magie
@@ -13,10 +14,12 @@ public class VillageManager : MonoBehaviour {
 
     public Dictionary<ItemType, int> NeedForSpec = new Dictionary<ItemType, int>();
     public Dictionary<ItemType, int> CurrentInventory = new Dictionary<ItemType, int>();
+    public Specialization Specialization = Specialization.None;
+
     private int warEffort = 0;
     public string Name;
 
-    public int GetFA() {
+    public int GetWarEffort() {
         return warEffort;
     }
 
@@ -36,6 +39,19 @@ public class VillageManager : MonoBehaviour {
     }
 
     private void SpecializeVillage(ItemType type) {
-        print("Ce village est spécialisé en " + type);
+        if (type == ItemType.Nourriture) {
+            Specialization = Specialization.Elevage;
+            warEffort = GameManager.Instance.ELEVAGE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+        }
+        else if (type == ItemType.Metal) {
+            Specialization = Specialization.Forge;
+            warEffort = GameManager.Instance.FORGE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+        }
+        else if (type == ItemType.Magie) {
+            Specialization = Specialization.Magie;
+            warEffort = GameManager.Instance.MAGIE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+        }
+
+        UiManager.instance.DisplayVillage(this);
     }
 }

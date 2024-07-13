@@ -9,7 +9,7 @@ public enum InventoryType {
     Player
 }
 
-public class Slot : MonoBehaviour, IPointerDownHandler
+public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public InventoryType inventoryType;
     [SerializeField] TextMeshProUGUI _quantityText;
@@ -56,7 +56,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
             }
         }
 
-        if (GameManager.Instance.GameState == GameState.VILLAGE &&  inventoryType == InventoryType.Player) {
+        if (GameManager.Instance.GameState == GameState.VILLAGE && inventoryType == InventoryType.Player && GameManager.Instance.CurrentVillage.Specialization == Specialization.None) {
 
             if (Input.GetMouseButtonDown(0)) {
                 GameManager.Instance.CurrentVillage.AddItemToVillageInventory(Item, 1);
@@ -66,7 +66,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler
                 GameManager.Instance.CurrentVillage.AddItemToVillageInventory(Item, _quantity);
                 GameManager.Instance.RemoveItemFromInventory(Item, _quantity);
             }
-            print(Item);
+            
             if (!GameManager.Instance.PlayerInventory.ContainsKey(Item))
                 _quantity = 0;
             else
@@ -77,5 +77,13 @@ public class Slot : MonoBehaviour, IPointerDownHandler
 
         UiManager.instance.DisplayInventory();
         _quantityText.text = _quantity.ToString();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData) {
+        UiManager.instance.DisplayTooltip(Item);
+    }
+
+    public void OnPointerExit(PointerEventData eventData) {
+        UiManager.instance.HideTooltip();
     }
 }
