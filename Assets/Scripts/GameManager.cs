@@ -3,8 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState {
+    WORLDMAP,
+    ADVENTURE,
+    VILLAGE
+}
 public class GameManager : MonoBehaviour {
     public static GameManager Instance;
+
+    public GameState GameState = GameState.WORLDMAP;
 
     [SerializeField] private int MAX_DAYS;
     [SerializeField] public float TRAVEL_TIME;
@@ -40,5 +47,9 @@ public class GameManager : MonoBehaviour {
         foreach(Transform village in _villagesTransform) {
             _villages.Add(village.GetComponent<VillageManager>());
         }
+    }
+
+    public void ChangeState(GameState newState) {
+        GameState = newState;
     }
 }

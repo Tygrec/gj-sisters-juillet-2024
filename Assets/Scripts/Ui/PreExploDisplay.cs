@@ -12,4 +12,10 @@ public class PreExploDisplay : MonoBehaviour
             image.sprite = Resources.Load<Sprite>($"Sprites/{item.name}");
         }
     }
+
+    public void Clear() {
+        foreach (Transform transform in lootableTransform) {
+            Destroy(transform.gameObject);
+        }
+    }
 }
