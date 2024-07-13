@@ -70,10 +70,19 @@ public class GameManager : MonoBehaviour {
         foreach (QuestItemType item in Enum.GetValues(typeof(QuestItemType))) {
             UnlockedQuestItems.Add(item, false);
         }
+        ChangeState(GameState.WORLDMAP);
     }
 
     public void ChangeState(GameState newState) {
         GameState = newState;
+
+        if (newState == GameState.WORLDMAP) {
+            SoundManager.Instance.Play("018-Field01");
+        } else if (newState == GameState.VILLAGE) {
+            SoundManager.Instance.Play("029-Town07");
+        } else if (newState == GameState.ADVENTURE) {
+            SoundManager.Instance.Play("035-Dungeon01");
+        }
     }
 
     public void AddItemToInventory(Item item, int quantity) {
