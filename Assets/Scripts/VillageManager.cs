@@ -16,6 +16,11 @@ public class VillageManager : MonoBehaviour {
     public Dictionary<ItemType, int> CurrentInventory = new Dictionary<ItemType, int>();
     public Specialization Specialization = Specialization.None;
 
+    [SerializeField] GameObject ElevageGraphics;
+    [SerializeField] GameObject MagieGraphics;
+    [SerializeField] GameObject ForgeGraphics;
+
+
     private int warEffort = 0;
     public string Name;
 
@@ -42,14 +47,17 @@ public class VillageManager : MonoBehaviour {
         if (type == ItemType.Nourriture) {
             Specialization = Specialization.Elevage;
             warEffort = GameManager.Instance.ELEVAGE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+            ElevageGraphics.SetActive(true);
         }
         else if (type == ItemType.Metal) {
             Specialization = Specialization.Forge;
             warEffort = GameManager.Instance.FORGE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+            ForgeGraphics.SetActive(true);
         }
         else if (type == ItemType.Magie) {
             Specialization = Specialization.Magie;
             warEffort = GameManager.Instance.MAGIE_VALUE * (GameManager.Instance.GetDaysLeft() / GameManager.Instance.PRODUCTION_EVERY_X_DAYS);
+            MagieGraphics.SetActive(true);
         }
 
         UiManager.instance.DisplayVillage(this);

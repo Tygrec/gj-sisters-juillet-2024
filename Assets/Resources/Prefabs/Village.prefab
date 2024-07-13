@@ -454,6 +454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Specialization: 0
+  ElevageGraphics: {fileID: 5640149266922087626}
+  MagieGraphics: {fileID: 2521839158336250659}
+  ForgeGraphics: {fileID: 6482493547607654029}
   Name: 
 --- !u!114 &1802084394890889046
 MonoBehaviour:
