@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fer
   m_EditorClassIdentifier: 
   Type: 1
-  value: 1
-  Rarity: 0
+  value: 5
+  Rarity: 1
