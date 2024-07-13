@@ -17,6 +17,8 @@ public class InventoryDisplay : MonoBehaviour
 
     public void Display() {
         button.SetActive(false);
+        gameObject.SetActive(true);
+
         int i = 0;
         foreach (var pair in GameManager.Instance.PlayerInventory) {
 

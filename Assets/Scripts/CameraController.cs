@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float moveSpeed = 10f;  // Vitesse de déplacement de la caméra
-    public float zoomSpeed = 2f;       // Vitesse de zoom de la caméra
+    public float moveSpeed = 10f;  // Vitesse de dï¿½placement de la camï¿½ra
+    public float zoomSpeed = 2f;       // Vitesse de zoom de la camï¿½ra
     public float minZoom = 5f;         // Limite minimale de zoom
     public float maxZoom = 100f;        // Limite maximale de zoom
+    public GameObject virtualCamera;
 
     void Update() {
         if (GameManager.Instance.GameState != GameState.WORLDMAP)
@@ -29,10 +30,10 @@ public class CameraController : MonoBehaviour
             moveHorizontal = 1f;
         }
 
-        // Calculer le déplacement
+        // Calculer le dï¿½placement
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical) * moveSpeed * Time.deltaTime;
 
-        // Appliquer le déplacement
+        // Appliquer le dï¿½placement
         transform.Translate(movement, Space.World);
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");

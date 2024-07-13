@@ -43,18 +43,17 @@ public class UiManager : MonoBehaviour
         _adventureDisplay.gameObject.SetActive(true);
         _adventureDisplay.DisplayPreExplo(adventure);
 
-        _inventoryDisplay.gameObject.SetActive(true);
+        _inventoryDisplay.Display();
     }
 
     public void DisplayVillage(VillageManager village) {
         _villageDisplay.gameObject.SetActive(true);
         _villageDisplay.Display(village);
-
-        _inventoryDisplay.gameObject.SetActive(true);
+        
+        _inventoryDisplay.Display();
     }
 
     public void DisplayInventory() {
-        _inventoryDisplay.gameObject.SetActive(true);
         _inventoryDisplay.Display();
     }
 

@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
 
     public int CurrentLocationId = -1;
     public VillageManager CurrentVillage = null;
+    public AdventureManager CurrentAdventure = null;
 
     public int GetDaysLeft() {
         return MAX_DAYS - _daysUsed;
@@ -78,11 +79,40 @@ public class GameManager : MonoBehaviour {
 
         if (newState == GameState.WORLDMAP) {
             SoundManager.Instance.Play("018-Field01");
+            ExitLocation();
         } else if (newState == GameState.VILLAGE) {
             SoundManager.Instance.Play("029-Town07");
         } else if (newState == GameState.ADVENTURE) {
             SoundManager.Instance.Play("035-Dungeon01");
         }
+    }
+
+    public void EnterLocation(LocationManager location) {
+        Debug.Log("Enter location " + location.name);
+        CurrentLocationId = location.id;
+
+        if (location.GetComponent<AdventureManager>() != null) {
+            CurrentAdventure = location.GetComponent<AdventureManager>();
+            ChangeState(GameState.ADVENTURE);
+        }
+        else if (location.GetComponent<VillageManager>() != null) {
+            CurrentVillage = location.GetComponent<VillageManager>();
+            ChangeState(GameState.VILLAGE);
+        }
+
+        location.ActivateCamera();
+        PlayerController.instance.camera.virtualCamera.SetActive(false);
+    }
+
+    public void ExitLocation() {
+
+        CurrentAdventure?.GetComponent<LocationManager>()?.DeactivateCamera();
+        CurrentVillage?.GetComponent<LocationManager>()?.DeactivateCamera();
+        
+        PlayerController.instance.camera.virtualCamera.SetActive(true);
+
+        CurrentAdventure = null;
+        CurrentVillage = null;
     }
 
     public void AddItemToInventory(Item item, int quantity) {

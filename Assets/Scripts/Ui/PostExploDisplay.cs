@@ -32,7 +32,6 @@ public class PostExploDisplay : MonoBehaviour
         foreach (Transform transform in lootableTransform) {
             Slot slot = transform.GetComponent<Slot>();
             slot.PutItemInPlayerInventory();
-            
         }
     }
 }

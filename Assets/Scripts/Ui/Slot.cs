@@ -55,6 +55,8 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
             }
         }
 
+        Debug.Log("CLICK");
+
         if (GameManager.Instance.GameState == GameState.VILLAGE && inventoryType == InventoryType.Player && GameManager.Instance.CurrentVillage.Specialization == Specialization.None) {
 
             if (Input.GetMouseButtonDown(0)) {

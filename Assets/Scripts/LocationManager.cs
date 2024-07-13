@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class LocationManager : MonoBehaviour {
 
     public int id;
+    public GameObject virtualCamera;
+
     private void OnMouseDown() {
         if (GameManager.Instance.GameState != GameState.WORLDMAP || EventSystem.current.IsPointerOverGameObject())
             return;
@@ -19,5 +21,12 @@ public class LocationManager : MonoBehaviour {
             return;
 
         UiManager.instance.DisplayMoveTextBox(this);
+    }
+
+    public void ActivateCamera() {
+        virtualCamera.SetActive(true);
+    }
+    public void DeactivateCamera() {
+        virtualCamera.SetActive(false);
     }
 }
