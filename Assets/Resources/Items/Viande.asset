@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Viande
   m_EditorClassIdentifier: 
   Type: 0
-  value: 3
-  Rarity: 1
+  value: 10
+  Rarity: 2
