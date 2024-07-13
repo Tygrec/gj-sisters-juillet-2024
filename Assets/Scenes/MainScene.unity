@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -709,7 +709,7 @@ MonoBehaviour:
   GameState: 0
   MAX_DAYS: 200
   TRAVEL_TIME: 1
-  INVENTORY_SIZE: 15
+  INVENTORY_SIZE: 8
   MAX_ITEM_FOR_SPEC: 10
   MIN_ITEM_FOR_SPEC: 20
   FORGE_VALUE: 1
@@ -886,6 +886,63 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.7510614, y: 1, z: -4.0259566}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2095440293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095440295}
+  - component: {fileID: 2095440294}
+  m_Layer: 0
+  m_Name: RoutineTimingController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2095440294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095440293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754970a73e201694787a76901341dc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBetweenSlowUpdateCalls: 0.14285715
+  ProfilerDebugAmount: 0
+  AutoTriggerManualTimeframe: 1
+  UpdateCoroutines: 0
+  FixedUpdateCoroutines: 0
+  LateUpdateCoroutines: 0
+  SlowUpdateCoroutines: 0
+  RealtimeUpdateCoroutines: 0
+  EditorUpdateCoroutines: 0
+  EditorSlowUpdateCoroutines: 0
+  EndOfFrameCoroutines: 0
+  ManualTimeframeCoroutines: 0
+  _instanceID: 1
+--- !u!4 &2095440295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095440293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1169,3 +1226,4 @@ SceneRoots:
   - {fileID: 453560743}
   - {fileID: 2022140246}
   - {fileID: 4183352444928758267}
+  - {fileID: 2095440295}

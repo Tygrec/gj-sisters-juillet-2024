@@ -6,6 +6,7 @@ public class InventoryDisplay : MonoBehaviour
 {
     List<Slot> _slots = new List<Slot>();
     [SerializeField] Transform _slotsTransform;
+    [SerializeField] GameObject button;
 
     private void Start() {
         for (int i = 0; i < GameManager.Instance.INVENTORY_SIZE; i++) {
@@ -15,6 +16,7 @@ public class InventoryDisplay : MonoBehaviour
     }
 
     public void Display() {
+        button.SetActive(false);
         int i = 0;
         foreach (var pair in GameManager.Instance.PlayerInventory) {
 
@@ -35,5 +37,6 @@ public class InventoryDisplay : MonoBehaviour
             return;
 
         gameObject.SetActive(false);
+        button.SetActive(true);
     }
 }
