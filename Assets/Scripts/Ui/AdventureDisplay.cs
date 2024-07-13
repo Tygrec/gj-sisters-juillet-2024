@@ -12,6 +12,7 @@ public class AdventureDisplay : MonoBehaviour
     private AdventureManager _currentAdventure;
 
     public void DisplayPreExplo(AdventureManager aventure) {
+        _adventureName.text = aventure.name;
         _currentAdventure = aventure;
         _preExplo.gameObject.SetActive(true);
         _postExplo.gameObject.SetActive(false);

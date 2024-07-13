@@ -20,6 +20,7 @@ public class VillageManager : MonoBehaviour {
     [SerializeField] GameObject MagieGraphics;
     [SerializeField] GameObject ForgeGraphics;
 
+    [SerializeField] public Quest quest; 
 
     private int warEffort = 0;
     public string Name;

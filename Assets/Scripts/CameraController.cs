@@ -10,7 +10,9 @@ public class CameraController : MonoBehaviour
     public float maxZoom = 100f;        // Limite maximale de zoom
 
     void Update() {
-        // Lire les entrées clavier
+        if (GameManager.Instance.GameState != GameState.WORLDMAP)
+            return;
+
         float moveHorizontal = 0f;
         float moveVertical = 0f;
 

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16809d84e07d9214fb81630fa1e76080, type: 3}
-  m_Name: Baguette sertie d'un rubi
+  m_Script: {fileID: 11500000, guid: b2c7fe72df93bc140b4f126d890e13ea, type: 3}
+  m_Name: Quest 1
   m_EditorClassIdentifier: 
-  Type: 2
-  value: 30
-  Rarity: 3
+  Item: {fileID: 11400000, guid: aea0148a3c8ef1a4bac9ff340fbb8516, type: 2}
+  Quantity: 3
+  Reward: {fileID: 11400000, guid: b8d21243c4f68064fad95d74428d359a, type: 2}

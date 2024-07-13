@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VillageDisplay : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class VillageDisplay : MonoBehaviour
     [SerializeField] TextMeshProUGUI villageName;
     [SerializeField] TextMeshProUGUI specializationText;
     [SerializeField] TextMeshProUGUI warEffortText;
+
+    // POUR LA QUETE
+    [SerializeField] Image rewardImage;
+    [SerializeField] TextMeshProUGUI questText;
+    [SerializeField] GameObject noQuest;
 
     [SerializeField] GameObject noSpe;
     [SerializeField] GameObject okSpe;
@@ -34,7 +40,14 @@ public class VillageDisplay : MonoBehaviour
             warEffortText.text = "Effort de guerre total : " + village.GetWarEffort().ToString();
         }
 
+        noQuest.SetActive(village.quest == null);
 
+        if (village.quest != null) {
+            rewardImage.sprite = Resources.Load<Sprite>($"Sprites/{village.quest.Reward}");
+            questText.text = $"Quête\n" +
+                $"Les villageois ont besoin de {village.quest.Quantity} {village.quest.Item}.\n" +
+                $"En échange, ils fourniront un {village.quest.Reward}.";
+        }
     }
 
     public void QuitDisplay() {

@@ -27,4 +27,12 @@ public class PostExploDisplay : MonoBehaviour
             Destroy(transform.gameObject);
         }
     }
+
+    public void TakeAll() {
+        foreach (Transform transform in lootableTransform) {
+            Slot slot = transform.GetComponent<Slot>();
+            slot.PutItemInPlayerInventory();
+            
+        }
+    }
 }

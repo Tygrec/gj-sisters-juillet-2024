@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Adventure_for\xEAt"
       objectReference: {fileID: 0}
+    - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

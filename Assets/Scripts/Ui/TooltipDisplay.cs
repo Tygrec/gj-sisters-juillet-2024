@@ -21,7 +21,7 @@ public class TooltipDisplay : MonoBehaviour
             $"Valeur : {item.value}";
         itemDescription.text = item.Description;
 
-        GetComponent<Outline>().effectColor = FromRarity.GetColor(item.Rarity);
+        GetComponent<UnityEngine.UI.Outline>().effectColor = FromRarity.GetColor(item.Rarity);
         itemName.color = FromRarity.GetColor(item.Rarity);
     }
 

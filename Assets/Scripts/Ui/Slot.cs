@@ -51,8 +51,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
                 _quantity--;
             }
             else if (Input.GetMouseButtonDown(1)) {
-                GameManager.Instance.AddItemToInventory(Item, _quantity);
-                _quantity = 0;
+                PutItemInPlayerInventory();
             }
         }
 
@@ -85,5 +84,12 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
 
     public void OnPointerExit(PointerEventData eventData) {
         UiManager.instance.HideTooltip();
+    }
+    public void PutItemInPlayerInventory() {
+        GameManager.Instance.AddItemToInventory(Item, _quantity);
+        _quantity = 0;
+
+        UiManager.instance.DisplayInventory();
+        _quantityText.text = _quantity.ToString();
     }
 }

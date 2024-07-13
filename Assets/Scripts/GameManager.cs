@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private List<VillageManager> _villages = new List<VillageManager>();
 
     public Dictionary<Item, int> PlayerInventory = new Dictionary<Item, int>();
+    public Dictionary<QuestItemType, bool> UnlockedQuestItems = new Dictionary<QuestItemType, bool>();
 
     public int CurrentLocationId = -1;
     public VillageManager CurrentVillage = null;
@@ -65,6 +66,10 @@ public class GameManager : MonoBehaviour {
             adventure.GetComponent<LocationManager>().id = i;
             i++;
         }
+
+        foreach (QuestItemType item in Enum.GetValues(typeof(QuestItemType))) {
+            UnlockedQuestItems.Add(item, false);
+        }
     }
 
     public void ChangeState(GameState newState) {
@@ -88,7 +93,5 @@ public class GameManager : MonoBehaviour {
         if(PlayerInventory[item] <= 0) {
             PlayerInventory.Remove(item);
         }
-
-     //   UiManager.instance.DisplayInventory();
     }
 }
