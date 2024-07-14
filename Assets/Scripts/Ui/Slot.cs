@@ -81,10 +81,16 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
+        if (Item == null)
+            return;
+
         UiManager.instance.DisplayTooltip(Item);
     }
 
     public void OnPointerExit(PointerEventData eventData) {
+        if (Item == null)
+            return;
+
         UiManager.instance.HideTooltip();
     }
     public void PutItemInPlayerInventory() {

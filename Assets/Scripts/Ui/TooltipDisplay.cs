@@ -19,7 +19,6 @@ public class TooltipDisplay : MonoBehaviour
         itemImage.sprite = Resources.Load<Sprite>($"Sprites/{item.name}");
         itemType.text = $"Type : {item.Type}\n" +
             $"Valeur : {item.value}";
-        itemDescription.text = item.Description;
 
         GetComponent<UnityEngine.UI.Outline>().effectColor = FromRarity.GetColor(item.Rarity);
         itemName.color = FromRarity.GetColor(item.Rarity);

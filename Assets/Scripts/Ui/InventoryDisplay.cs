@@ -35,7 +35,7 @@ public class InventoryDisplay : MonoBehaviour
     }
 
     public void ExitDisplay() {
-        if (GameManager.Instance.GameState != GameState.WORLDMAP)
+        if (GameManager.Instance.GameState != GameState.WORLDMAP && GameManager.Instance.GameState != GameState.TUTORIAL)
             return;
 
         gameObject.SetActive(false);

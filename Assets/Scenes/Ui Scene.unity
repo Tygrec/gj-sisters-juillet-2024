@@ -1072,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &196325973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1294,7 +1294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &294062885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3823,8 +3823,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 758f46083f3391d47b950c1e36d633d7, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4434,8 +4434,8 @@ MonoBehaviour:
     arm\xE9es se d\xE9versent sur Mozylo et apr\xE8s quelques rapides combats, mettent
     la r\xE9gion \xE0 feu et sang..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3a811467180db794496528d9abc8a562, type: 2}
+  m_sharedMaterial: {fileID: -6701431565014943273, guid: 3a811467180db794496528d9abc8a562, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6159,8 +6159,8 @@ MonoBehaviour:
     d\xE9cidez de vous installer dans le village de Daglan afin d'y couler des jours
     paisibles..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3a811467180db794496528d9abc8a562, type: 2}
+  m_sharedMaterial: {fileID: -6701431565014943273, guid: 3a811467180db794496528d9abc8a562, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6461,7 +6461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1890716390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6480,8 +6480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.2175, y: -43.5808}
-  m_SizeDelta: {x: 759.9922, y: 474.6085}
+  m_AnchoredPosition: {x: -2.2175, y: -32.303}
+  m_SizeDelta: {x: 759.9922, y: 497.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890716391
 MonoBehaviour:
