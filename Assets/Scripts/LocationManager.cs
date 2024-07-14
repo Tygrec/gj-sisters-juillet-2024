@@ -9,6 +9,11 @@ public class LocationManager : MonoBehaviour {
     public GameObject virtualCamera;
     public bool AlreadyVisited = false;
 
+    public int GetNbDaysFromPlayer() {
+        var distance = Vector3.Distance(PlayerController.instance.transform.position, transform.position);
+        return (int)distance / 10;
+    }
+
     private void OnMouseDown() {
         if (GameManager.Instance.GameState != GameState.WORLDMAP || EventSystem.current.IsPointerOverGameObject())
             return;
@@ -22,8 +27,7 @@ public class LocationManager : MonoBehaviour {
             UiManager.instance.DisplayAdventure(GetComponent<AdventureManager>());
             return;
         }
-                        
-
+        
         UiManager.instance.DisplayMoveTextBox(this);
     }
 

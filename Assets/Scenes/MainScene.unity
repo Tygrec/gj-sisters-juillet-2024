@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -428,11 +428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -1861,11 +1861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: lootables.Array.size
@@ -1943,11 +1943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: lootables.Array.size
@@ -2103,11 +2103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -2329,11 +2329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -3696,11 +3696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -3984,11 +3984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4691,11 +4691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4756,11 +4756,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: lootables.Array.size
@@ -4901,6 +4901,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 82c5825e5c5083e469309151b68d0c7c, type: 3}
   m_PrefabInstance: {fileID: 1346284387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1366153153 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4134085340458149963, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
+  m_PrefabInstance: {fileID: 4183352444928758267}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1367742574
 PrefabInstance:
@@ -5466,11 +5471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -5552,11 +5557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -5790,7 +5795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: 0
-  MAX_DAYS: 200
+  MAX_DAYS: 500
   TRAVEL_TIME: 1
   INVENTORY_SIZE: 8
   MAX_ITEM_FOR_SPEC: 10
@@ -5799,6 +5804,7 @@ MonoBehaviour:
   ELEVAGE_VALUE: 2
   MAGIE_VALUE: 4
   PRODUCTION_EVERY_X_DAYS: 10
+  ENNEMY_FA: 200
   _adventuresTransform: {fileID: 1804144733}
   _villagesTransform: {fileID: 453560743}
   _villages: []
@@ -7148,11 +7154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: lootables.Array.size
@@ -7589,6 +7595,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 27853767}
     - target: {fileID: 6547745580795125907, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1366153153}
+    - target: {fileID: 6547745580795125907, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
       propertyPath: _graphics
       value: 
       objectReference: {fileID: 1146151260}
@@ -7627,11 +7637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToDo
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: nbDaysToReset
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_LocalPosition.x

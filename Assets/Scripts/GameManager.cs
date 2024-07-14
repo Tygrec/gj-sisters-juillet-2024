@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] public int ELEVAGE_VALUE;
     [SerializeField] public int MAGIE_VALUE;
     [SerializeField] public int PRODUCTION_EVERY_X_DAYS;
+    [SerializeField] public int ENNEMY_FA;
 
     private int _daysUsed;
     [SerializeField] private Transform _adventuresTransform;
@@ -43,6 +44,10 @@ public class GameManager : MonoBehaviour {
     public void AddDay() {
         OnDayPass.Invoke();
         _daysUsed++;
+
+        if (_daysUsed >= MAX_DAYS) {
+            UiManager.instance.DisplayEndScreen(ENNEMY_FA < GetCurrentFA());
+        }
     }
     public int GetCurrentFA() {
         int fa = 0;
