@@ -35,11 +35,14 @@ public class GameManager : MonoBehaviour {
     public VillageManager CurrentVillage = null;
     public AdventureManager CurrentAdventure = null;
 
+    public Action OnDayPass;
+
     public int GetDaysLeft() {
         return MAX_DAYS - _daysUsed;
     }
-    public void AddDays(int days) {
-        _daysUsed += days;
+    public void AddDay() {
+        OnDayPass.Invoke();
+        _daysUsed++;
     }
     public int GetCurrentFA() {
         int fa = 0;
@@ -80,10 +83,13 @@ public class GameManager : MonoBehaviour {
         if (newState == GameState.WORLDMAP) {
             SoundManager.Instance.Play("018-Field01");
             ExitLocation();
+            PlayerController.instance.ShowPlayer(true);
         } else if (newState == GameState.VILLAGE) {
             SoundManager.Instance.Play("029-Town07");
+            PlayerController.instance.ShowPlayer(false);
         } else if (newState == GameState.ADVENTURE) {
             SoundManager.Instance.Play("035-Dungeon01");
+            PlayerController.instance.ShowPlayer(false);
         }
     }
 

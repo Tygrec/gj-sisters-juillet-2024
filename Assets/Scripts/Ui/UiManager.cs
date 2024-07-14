@@ -29,9 +29,6 @@ public class UiManager : MonoBehaviour
     }
 
     public void MoveToLocation() {
-        if (GameManager.Instance.CurrentLocationId == _currentLocation.id)
-            return;
-
         PlayerController.instance.MoveTo(_currentLocation);
     }
 
@@ -41,7 +38,11 @@ public class UiManager : MonoBehaviour
 
     public void DisplayAdventure(AdventureManager adventure) {
         _adventureDisplay.gameObject.SetActive(true);
-        _adventureDisplay.DisplayPreExplo(adventure);
+
+        if (adventure.Available)
+            _adventureDisplay.DisplayPreExplo(adventure);
+        else
+            _adventureDisplay.DisplayNotAvailable(adventure);
 
         _inventoryDisplay.Display();
     }

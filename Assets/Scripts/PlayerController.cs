@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _startPosition;
     private Vector3 _endPosition;
 
+    [SerializeField] GameObject _graphics;
+
     public CameraController camera;
 
     private void Awake() {
@@ -20,7 +22,9 @@ public class PlayerController : MonoBehaviour
         _endPosition = location.transform.position;
 
         float distance = Vector3.Distance(_startPosition, _endPosition);
-        GameManager.Instance.AddDays((int)distance);
+
+        for (int i = 0; i < distance; i++)
+            GameManager.Instance.AddDay();
 
         StartCoroutine(I_MoveTo(location));
     }
@@ -49,5 +53,9 @@ public class PlayerController : MonoBehaviour
         else if (location.gameObject.GetComponent<VillageManager>() != null) {
             UiManager.instance.DisplayVillage(location.gameObject.GetComponent<VillageManager>());
         }
+    }
+
+    public void ShowPlayer(bool show) {
+        _graphics.SetActive(show);
     }
 }

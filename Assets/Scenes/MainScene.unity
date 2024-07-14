@@ -4192,6 +4192,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0eef0fefa5651bd42873245fb9b7ab9b, type: 3}
   m_PrefabInstance: {fileID: 1118366913}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1146151260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6920982636056920296, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
+  m_PrefabInstance: {fileID: 4183352444928758267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158781236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7498,6 +7503,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 27853767}
+    - target: {fileID: 6547745580795125907, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
+      propertyPath: _graphics
+      value: 
+      objectReference: {fileID: 1146151260}
     - target: {fileID: 7890899097542305229, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
       propertyPath: m_LocalScale.x
       value: 25
