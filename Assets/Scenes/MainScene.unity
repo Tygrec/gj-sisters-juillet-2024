@@ -427,6 +427,14 @@ PrefabInstance:
       value: "Adventure_for\xEAt (2)"
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1852,6 +1860,14 @@ PrefabInstance:
       value: Adventure_ruines
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: lootables.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1924,6 +1940,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: m_Name
       value: Adventure_grotte
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: lootables.Array.size
@@ -2076,6 +2100,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
       value: "Adventure_for\xEAt"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -2294,6 +2326,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
       value: Aventure_foret2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -3655,6 +3695,14 @@ PrefabInstance:
       value: "Adventure_for\xEAt (4)"
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3933,6 +3981,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: m_Name
       value: Adventure_grotte
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4633,6 +4689,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adventure_ruines
       objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.35
@@ -4689,6 +4753,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: m_Name
       value: Adventure_grotte (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 6bd0f075df723f34a9cbb4f74945ad35, type: 3}
       propertyPath: lootables.Array.size
@@ -5393,6 +5465,14 @@ PrefabInstance:
       value: "Adventure_for\xEAt (1)"
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5469,6 +5549,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
       value: "Adventure_for\xEAt (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: lootables.Array.size
@@ -7059,6 +7147,14 @@ PrefabInstance:
       value: Adventure_ruines (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 03c2ee271c0de1c4ba004d248b1e668b, type: 3}
       propertyPath: lootables.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7524,6 +7620,14 @@ PrefabInstance:
     - target: {fileID: 5547831618039207145, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_Name
       value: Aventure_foret1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToDo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817545101890035866, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
+      propertyPath: nbDaysToReset
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9170378582350812612, guid: 5cae76078ec609e42b1087dd75eb5105, type: 3}
       propertyPath: m_LocalPosition.x

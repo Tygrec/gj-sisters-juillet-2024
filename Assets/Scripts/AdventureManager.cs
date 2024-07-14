@@ -27,7 +27,10 @@ public class AdventureManager : MonoBehaviour
             DaysLeftToReset = nbDaysToReset;
             Available = true;
         }
+    }
 
-
+    public void MakeAdventureUnavailable() {
+        Available = false;
+        DaysLeftToReset = nbDaysToReset;
     }
 }

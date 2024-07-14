@@ -13,6 +13,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] InventoryDisplay _inventoryDisplay;
 
     [SerializeField] TooltipDisplay _tooltipDisplay;
+    [SerializeField] TooltipLocation _tooltipLocation;
 
     private LocationManager _currentLocation;
     private GameObject _moveBox;
@@ -69,6 +70,15 @@ public class UiManager : MonoBehaviour
     }
     public void HideTooltip() {
         _tooltipDisplay?.gameObject.SetActive(false);
+    }
+
+    public void DisplayTooltipLocation(AdventureManager adventure) {
+        _tooltipLocation.gameObject.SetActive(true);
+        _tooltipLocation.Display(adventure);
+    }
+    public void ClearTooltipLocation() {
+        _tooltipLocation.gameObject.SetActive(false);
+        _tooltipLocation.Clear();
     }
 
 }

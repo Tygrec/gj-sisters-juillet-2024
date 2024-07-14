@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour {
 
     public void EnterLocation(LocationManager location) {
 
+        location.AlreadyVisited = true;
+
         CurrentLocationId = location.id;
 
         if (location.GetComponent<AdventureManager>() != null) {
