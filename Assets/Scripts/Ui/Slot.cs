@@ -26,6 +26,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
     }
 
     public void DisplayItem(Item item, int quantity) {
+        _itemImage.gameObject.SetActive(true);
         _quantityText.transform.parent.gameObject.SetActive(true);
         Item = item;
         _quantity = quantity;
@@ -38,6 +39,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IP
         _quantity = 0;
         _quantityText.transform.parent.gameObject.SetActive(false);
         _itemImage.sprite = null;
+        _itemImage.gameObject.SetActive(false);
     }
 
     public void OnPointerDown(PointerEventData eventData) {
