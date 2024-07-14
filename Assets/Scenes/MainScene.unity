@@ -8168,7 +8168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: 0
-  MAX_DAYS: 500
+  MAX_DAYS: 250
   TRAVEL_TIME: 1
   INVENTORY_SIZE: 8
   MAX_ITEM_FOR_SPEC: 10
