@@ -26,7 +26,7 @@ public class AdventureDisplay : MonoBehaviour
         _currentAdventure = adventure;
         _preExplo.gameObject.SetActive(true);
         _postExplo.gameObject.SetActive(false);
-        _notAvailable.gameObject.SetActive(false);
+    //    _notAvailable.gameObject.SetActive(false);
 
         _preExplo.Display(adventure);
     }
@@ -34,7 +34,7 @@ public class AdventureDisplay : MonoBehaviour
     public void DisplayPostExplo() {
         _preExplo.Clear();
         _preExplo.gameObject.SetActive(false);
-        _notAvailable.gameObject.SetActive(false);
+    //    _notAvailable.gameObject.SetActive(false);
         _postExplo.gameObject.SetActive(true);
 
         for (int i = 0; i < _currentAdventure.nbDaysToDo; i++)

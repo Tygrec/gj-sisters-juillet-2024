@@ -81,20 +81,20 @@ public class GameManager : MonoBehaviour {
         GameState = newState;
 
         if (newState == GameState.WORLDMAP) {
-            SoundManager.Instance.Play("018-Field01");
+            // SoundManager.Instance.Play("018-Field01");
             ExitLocation();
             PlayerController.instance.ShowPlayer(true);
         } else if (newState == GameState.VILLAGE) {
-            SoundManager.Instance.Play("029-Town07");
+           // SoundManager.Instance.Play("029-Town07");
             PlayerController.instance.ShowPlayer(false);
         } else if (newState == GameState.ADVENTURE) {
-            SoundManager.Instance.Play("035-Dungeon01");
+         //   SoundManager.Instance.Play("035-Dungeon01");
             PlayerController.instance.ShowPlayer(false);
         }
     }
 
     public void EnterLocation(LocationManager location) {
-        Debug.Log("Enter location " + location.name);
+
         CurrentLocationId = location.id;
 
         if (location.GetComponent<AdventureManager>() != null) {
