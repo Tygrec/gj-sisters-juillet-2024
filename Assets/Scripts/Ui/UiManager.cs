@@ -15,6 +15,10 @@ public class UiManager : MonoBehaviour
     [SerializeField] TooltipDisplay _tooltipDisplay;
     [SerializeField] TooltipLocation _tooltipLocation;
 
+    [SerializeField] GameObject _endScreen;
+    [SerializeField] GameObject _victory;
+    [SerializeField] GameObject _defeat;
+
     private LocationManager _currentLocation;
     private MoveBox _moveBox;
 
@@ -82,4 +86,9 @@ public class UiManager : MonoBehaviour
         _tooltipLocation.Clear();
     }
 
+    public void DisplayEndScreen(bool victory) {
+        _endScreen.SetActive(true);
+        _victory.SetActive(victory);
+        _defeat.SetActive(!victory);
+    }
 }

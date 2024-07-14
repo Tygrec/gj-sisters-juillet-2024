@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _endPosition;
 
     [SerializeField] GameObject _graphics;
+    [SerializeField] Animator _animator;
 
     public CameraController camera;
 
@@ -18,6 +20,12 @@ public class PlayerController : MonoBehaviour
     }
 
     public void MoveTo(LocationManager location) {
+        // Tourner le joueur en direction de la location
+        Vector3 direction = location.transform.position - transform.position;
+        direction.y = 0;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 30 * Time.deltaTime);
+
         _startPosition = transform.position;
         _endPosition = location.transform.position;
 
@@ -25,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < distance; i++)
             GameManager.Instance.AddDay();
+
+        _animator.SetBool("running", true);
 
         StartCoroutine(I_MoveTo(location));
     }
@@ -53,6 +63,8 @@ public class PlayerController : MonoBehaviour
         else if (location.gameObject.GetComponent<VillageManager>() != null) {
             UiManager.instance.DisplayVillage(location.gameObject.GetComponent<VillageManager>());
         }
+
+        _animator.SetBool("running", false);
     }
 
     public void ShowPlayer(bool show) {
