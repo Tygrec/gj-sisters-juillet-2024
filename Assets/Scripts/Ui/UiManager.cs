@@ -16,7 +16,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] TooltipLocation _tooltipLocation;
 
     private LocationManager _currentLocation;
-    private GameObject _moveBox;
+    private MoveBox _moveBox;
 
     private void Awake() {
         instance = this;
@@ -24,18 +24,19 @@ public class UiManager : MonoBehaviour
 
     public void DisplayMoveTextBox(LocationManager location) {
         if (_moveBox != null) {
-            Destroy(_moveBox);
+            Destroy(_moveBox.gameObject);
         }
 
         _currentLocation = location;
-        _moveBox = Instantiate(Resources.Load<GameObject>("Prefabs/MoveBox"), transform);
+        _moveBox = Instantiate(Resources.Load<MoveBox>("Prefabs/MoveBox"), transform);
         _moveBox.transform.position = Input.mousePosition;
+        _moveBox.SetDays(location.GetNbDaysFromPlayer());
     }
 
     public void MoveToLocation() {
         PlayerController.instance.MoveTo(_currentLocation);
 
-        Destroy(_moveBox);
+        Destroy(_moveBox.gameObject);
     }
 
     private void Update() {

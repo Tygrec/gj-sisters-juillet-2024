@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] public int ELEVAGE_VALUE;
     [SerializeField] public int MAGIE_VALUE;
     [SerializeField] public int PRODUCTION_EVERY_X_DAYS;
+    [SerializeField] public int ENNEMY_FA;
 
     private int _daysUsed;
     [SerializeField] private Transform _adventuresTransform;

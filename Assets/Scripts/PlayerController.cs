@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         _startPosition = transform.position;
         _endPosition = location.transform.position;
 
-        float distance = Vector3.Distance(_startPosition, _endPosition);
+        float distance = location.GetNbDaysFromPlayer();
 
         for (int i = 0; i < distance; i++)
             GameManager.Instance.AddDay();
