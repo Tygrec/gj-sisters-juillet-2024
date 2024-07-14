@@ -153,10 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670210e62a6548a45b08050b9fcf9aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootables:
-  - {fileID: 11400000, guid: aea0148a3c8ef1a4bac9ff340fbb8516, type: 2}
-  - {fileID: 11400000, guid: 0b8214b39e1e0f540ae06e05d1ba19ba, type: 2}
-  - {fileID: 11400000, guid: 2ce49e036b94f0c40be2240962a882ff, type: 2}
+  lootables: []
   nbDays: 0
 --- !u!114 &7893151524138121810
 MonoBehaviour:
@@ -348,10 +345,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: -26, y: 12.39, z: 0}
+  ShoulderOffset: {x: 0.22, y: 0.35, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
-  CameraDistance: 54.1
+  CameraDistance: 2.84
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 0
@@ -384,8 +381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8811353676347829766}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10216142, y: 0.22090904, z: -0.023274777, w: 0.96964973}
-  m_LocalPosition: {x: -1.528305, y: 0.7518085, z: -3.1800504}
+  m_LocalRotation: {x: 0.1282752, y: -0.038325835, z: 0.0049609756, w: 0.9909854}
+  m_LocalPosition: {x: 0.22000003, y: 0.75, z: -2.8399997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -6,6 +6,8 @@ public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
 
+    [SerializeField] GameObject _moveTextBox;
+    [SerializeField] TMPro.TextMeshProUGUI _moveTextBoxText;
     [SerializeField] HudDisplay _hudDisplay;
 
     [SerializeField] AdventureDisplay _adventureDisplay;
@@ -15,20 +17,15 @@ public class UiManager : MonoBehaviour
     [SerializeField] TooltipDisplay _tooltipDisplay;
 
     private LocationManager _currentLocation;
-    private GameObject _moveBox;
 
     private void Awake() {
         instance = this;
     }
 
     public void DisplayMoveTextBox(LocationManager location) {
-        if (_moveBox != null) {
-            Destroy(_moveBox);
-        }
-
         _currentLocation = location;
-        _moveBox = Instantiate(Resources.Load<GameObject>("Prefabs/MoveBox"), transform);
-        _moveBox.transform.position = Input.mousePosition;
+        _moveTextBox.SetActive(true);
+        _moveTextBoxText.text = "Voulez-vous vous rendre à " + location.name + " ?";
     }
 
     public void MoveToLocation() {
@@ -36,8 +33,6 @@ public class UiManager : MonoBehaviour
             return;
 
         PlayerController.instance.MoveTo(_currentLocation);
-
-        Destroy(_moveBox);
     }
 
     private void Update() {
