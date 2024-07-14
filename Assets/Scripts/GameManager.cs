@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum GameState {
+    TUTORIAL,
     WORLDMAP,
     ADVENTURE,
     VILLAGE
