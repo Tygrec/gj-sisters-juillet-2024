@@ -369,12 +369,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2946803210567125807}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.28, y: 3.46, z: -0.98}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.27999973, y: 3.46, z: -0.97999996}
+  m_LocalScale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 610123797526963524}
+  m_Father: {fileID: 3344586367600572313}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &9085252350092324094
 ParticleSystem:
@@ -5410,7 +5410,6 @@ Transform:
   - {fileID: 6322669731831069296}
   - {fileID: 3344586367600572313}
   - {fileID: 2334196071869638003}
-  - {fileID: 6483438645832252566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7353454044271970291
@@ -5543,6 +5542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   virtualCamera: {fileID: 4682096169425489825}
+  AlreadyVisited: 0
 --- !u!1 &6482493547607654029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,7 +5558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3344586367600572313
 Transform:
   m_ObjectHideFlags: 0
@@ -5620,6 +5620,7 @@ Transform:
   - {fileID: 1452813851710056331}
   - {fileID: 3851124967073904435}
   - {fileID: 7519139680289863782}
+  - {fileID: 6483438645832252566}
   - {fileID: 5145979444256793171}
   m_Father: {fileID: 610123797526963524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
