@@ -7580,6 +7580,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: 4134085340458149963, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9f86f92bacb99474a9c8385908af1d7d, type: 2}
     - target: {fileID: 6547745580795125907, guid: 5ce8fd449ac0d794e9ac605b1fadc5ed, type: 3}
       propertyPath: camera
       value: 
