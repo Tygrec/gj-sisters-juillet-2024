@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mana
   m_EditorClassIdentifier: 
   Type: 2
-  value: 10
+  value: 5
   Rarity: 2
+  Description: 

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,9 +21,12 @@ public class PlayerController : MonoBehaviour
     public void MoveTo(LocationManager location) {
         // Tourner le joueur en direction de la location
         Vector3 direction = location.transform.position - transform.position;
-        direction.y = 0;
+
+        // Calculer la rotation cible
         Quaternion targetRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 30 * Time.deltaTime);
+
+        // Appliquer instantanément la rotation cible
+        transform.rotation = targetRotation;
 
         _startPosition = transform.position;
         _endPosition = location.transform.position;
@@ -41,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator I_MoveTo(LocationManager location) {
         float elapsedTime = 0.0f;
-        float travelTime = GameManager.Instance.TRAVEL_TIME;
+        float travelTime = Vector3.Distance(_startPosition, _endPosition) / 100;
 
         while (elapsedTime < travelTime) {
             float fraction = elapsedTime / travelTime;

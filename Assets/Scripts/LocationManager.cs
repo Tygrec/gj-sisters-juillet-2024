@@ -9,6 +9,8 @@ public class LocationManager : MonoBehaviour {
     public GameObject virtualCamera;
     public bool AlreadyVisited = false;
 
+    [SerializeField] Transform Canvas;
+
     public int GetNbDaysFromPlayer() {
         var distance = Vector3.Distance(PlayerController.instance.transform.position, transform.position);
         return (int)distance / 10;
@@ -35,10 +37,8 @@ public class LocationManager : MonoBehaviour {
         if (!AlreadyVisited || EventSystem.current.IsPointerOverGameObject() || GameManager.Instance.GameState != GameState.WORLDMAP)
             return;
 
-        if (GetComponent<VillageManager>() != null) {
-
-        }
-        else if (GetComponent<AdventureManager>() != null) {
+     
+        if (GetComponent<AdventureManager>() != null) {
             UiManager.instance.DisplayTooltipLocation(GetComponent<AdventureManager>());
         }
     }
